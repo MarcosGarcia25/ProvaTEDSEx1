@@ -14,18 +14,24 @@ public class Equacao2oGrau {
 	private double delta() {
 		return b * b - 4.0 * a * c;
 	}
-
+	
 	private Raizes getRaizUnica() {
 		return new Raizes((-b) / (2.0 * a), (-b) / (2.0 * a));
 	}
-
+	
+    private Raizes getDuasRaizes(double d) {
+		return new Raizes(((-b) + Math.sqrt(d)) / (2.0 * a), ((-b) - Math.sqrt(d)) / (2.0 * a));
+	}
+	
 	public Raizes getRaizes() {
 		double d = delta();
 		if (d == 0.0) {
 			return getRaizUnica();
+		} else if (d > 0.0) {
+			return getDuasRaizes(d);
 		} else {
-			return null;
-		}
+            return null;
+        }
 	}
 
 }
