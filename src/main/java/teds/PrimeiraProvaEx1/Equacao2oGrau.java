@@ -23,15 +23,15 @@ public class Equacao2oGrau {
 		return new Raizes(((-b) + Math.sqrt(d)) / (2.0 * a), ((-b) - Math.sqrt(d)) / (2.0 * a));
 	}
 	
-	public Raizes getRaizes() {
+    public Raizes getRaizes() {
 		double d = delta();
-		if (d == 0.0) {
+		if (d < 0.0) {
+			throw new ArithmeticException("Delta Negativo. Não existem raízes reais.");
+		} else if (d == 0.0) {
 			return getRaizUnica();
-		} else if (d > 0.0) {
-			return getDuasRaizes(d);
 		} else {
-            return null;
-        }
+			return getDuasRaizes(d);
+		}
 	}
 
 }
