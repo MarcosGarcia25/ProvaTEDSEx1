@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: teds.PrimeiraProvaEx1.Equacao2oGrauTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.018 s <<< FAILURE! - in teds.PrimeiraProvaEx1.Equacao2oGrauTest
+test  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.IndexOutOfBoundsException> but was: <java.lang.ArithmeticException>
+	at teds.PrimeiraProvaEx1.Equacao2oGrauTest.test(Equacao2oGrauTest.java:13)
+Caused by: java.lang.ArithmeticException: Delta Negativo. Não existem raízes reais.
+	at teds.PrimeiraProvaEx1.Equacao2oGrauTest.lambda$test$0(Equacao2oGrauTest.java:13)
+	at teds.PrimeiraProvaEx1.Equacao2oGrauTest.test(Equacao2oGrauTest.java:13)
+
