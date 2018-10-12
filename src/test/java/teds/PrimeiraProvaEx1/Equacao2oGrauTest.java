@@ -10,7 +10,7 @@ class Equacao2oGrauTest {
 	
 	@Test
 	void test() {
-		assertThrows(IndexOutOfBoundsException.class, () -> equacao.getRaizes());
+		assertThrows(ArithmeticException.class, () -> equacao.getRaizes());
 	}
 
 }
